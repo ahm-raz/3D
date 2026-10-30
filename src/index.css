@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --color-ink: #050507;
+  --color-bone: #ecebe6;
+  --color-signal: #ff2a2a;
+  --color-ember: #ff7a1a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-bone);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* GSAP owns these; start hidden so there is no flash before the intro timeline runs */
+[data-hero],
+[data-feature] {
+  opacity: 0;
+}
+
+.hotspot {
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+/* right-side callouts: dot stays on the anchor, label extends to the left */
+.hotspot.flip > div {
+  flex-direction: row-reverse;
+  margin-left: 0;
+  transform: translateX(calc(-100% + 5px));
+}
