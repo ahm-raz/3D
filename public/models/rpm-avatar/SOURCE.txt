@@ -1,0 +1,3 @@
+Avatar: Ready Player Me sample avatar ("copyright: Ready Player Me" in the file),
+as distributed with the three.js examples (examples/models/gltf/readyplayer.me.glb).
+Check Ready Player Me's terms before commercial use.
